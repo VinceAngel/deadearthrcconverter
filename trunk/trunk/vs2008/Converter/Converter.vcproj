@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="D:\codage\wxwidget\wxWidgets-2.8.10\include;D:\codage\wxwidget\wxWidgets-2.8.10\include\msvc;"
+				AdditionalIncludeDirectories="D:\codage\DERCconverter\trunk\include;&quot;D:\codage\wxwidget\wxWidgets-2.8.10\include&quot;;&quot;D:\codage\wxwidget\wxWidgets-2.8.10\include\msvc&quot;"
 				PreprocessorDefinitions="WXUSINGDLL;_DEBUG"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -117,7 +117,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="D:\codage\wxwidget\wxWidgets-2.8.10\include;D:\codage\wxwidget\wxWidgets-2.8.10\include\msvc;"
+				AdditionalIncludeDirectories="D:\codage\DERCconverter\trunk\include;&quot;D:\codage\wxwidget\wxWidgets-2.8.10\include&quot;;&quot;D:\codage\wxwidget\wxWidgets-2.8.10\include\msvc&quot;"
 				PreprocessorDefinitions="WXUSINGDLL;_RELEASE"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -180,12 +180,20 @@
 				RelativePath="..\..\src\main.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\..\src\MainFrame.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Fichiers d&apos;en-tête"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath="..\..\include\MainFrame.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Fichiers de ressources"
