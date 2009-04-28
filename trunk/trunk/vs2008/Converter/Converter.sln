@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Converter", "Converter.vcproj", "{EEAE7684-5C69-4DFF-9B36-404EF93E7DB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEAE7684-5C69-4DFF-9B36-404EF93E7DB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EEAE7684-5C69-4DFF-9B36-404EF93E7DB2}.Debug|Win32.Build.0 = Debug|Win32
+		{EEAE7684-5C69-4DFF-9B36-404EF93E7DB2}.Release|Win32.ActiveCfg = Release|Win32
+		{EEAE7684-5C69-4DFF-9B36-404EF93E7DB2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
