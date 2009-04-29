@@ -9,18 +9,6 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
 
 	panel= new wxPanel(this);
 
-	// create menubar
-/*	wxMenuBar *menuBar = new wxMenuBar;
-	// create menu
-	wxMenu *menuFile = new wxMenu;
-	// append menu entries
-	menuFile->Append(ID_About,_T("&About..."));
-	menuFile->AppendSeparator();
-	menuFile->Append(ID_Quit,_T("E&xit"));
-	// append menu to menubar
-	menuBar->Append(menuFile,_T("&File"));
-	// set frame menubar
-	SetMenuBar(menuBar);*/
 
 	// create frame statusbar
 	CreateStatusBar();
@@ -32,33 +20,20 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
 	button = new wxButton(panel, ID_Clic, "Convertir",wxPoint(360,100),wxSize(80,40));
 
 	// input text
-	inputText = new wxTextCtrl(panel, ID_In, "test\nhaha", wxPoint(2,2), wxSize(350,399));
-	inputText->SetEditable(true);
+	inputText = new wxTextCtrl(panel, ID_In, "test\nhaha", wxPoint(2,2), wxSize(350,399),wxTE_MULTILINE);
 	inputText->SetHelpText("Paste you RC here");
-	inputText->SetWindowStyle(wxTE_MULTILINE);
 
 	// output text
-	outputText = new wxTextCtrl(panel, ID_Out, "result", wxPoint(448,2), wxSize(348,399));
-	outputText->SetEditable(false);
+	outputText = new wxTextCtrl(panel, ID_Out, "result", wxPoint(448,2), wxSize(348,399),wxTE_READONLY | wxTE_MULTILINE);
 	outputText->SetHelpText("Get you RC here");
-	outputText->SetWindowStyle(wxTE_READONLY | wxTE_MULTILINE);
 	
 }
-/*
-void MainFrame::OnQuit(wxCommandEvent& WXUNUSED(event))
-{
-	Close(TRUE);
-}
 
-void MainFrame::OnAbout(wxCommandEvent& WXUNUSED(event))
-{
-	wxMessageBox(_T("DeadEarth RC converter"),_T("version 0.1"),
-                wxOK|wxICON_INFORMATION, this);
-}*/
 
 void MainFrame::Clic(wxCommandEvent &event)
 {
 	std::cout << "Converting ...." << std::endl;
+	outputText->AppendText("\nDone");
 	std::cout << "Done ! " << std::endl;
 }
 

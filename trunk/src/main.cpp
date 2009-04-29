@@ -24,10 +24,6 @@ bool MyApp::OnInit()
 	MainFrame *frame = new MainFrame(_T("DE RC converter v0.1"), wxPoint(50,50),
                 wxSize(800,400));
 
-/*	frame->Connect( ID_Quit, wxEVT_COMMAND_MENU_SELECTED,
-		(wxObjectEventFunction) &MainFrame::OnQuit );
-	frame->Connect( ID_About, wxEVT_COMMAND_MENU_SELECTED,
-		(wxObjectEventFunction) &MainFrame::OnAbout );*/
 
 	frame->Show(TRUE);
 	SetTopWindow(frame);

@@ -194,6 +194,10 @@
 				RelativePath="..\..\include\MainFrame.h"
 				>
 			</File>
+			<File
+				RelativePath="..\..\include\Parser.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Fichiers de ressources"
