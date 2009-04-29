@@ -1,8 +1,7 @@
 #ifndef _PARSER_H_
 #define _PARSER_H_
 
-#include <string>
-using std::string;
+#include <define.h>
 
 class Parser
 {
@@ -11,8 +10,14 @@ public :
 	Parser(string input);
 	~Parser();
 
+	//init the fields
+	void init();
+
+	// Read the data parse it in separate field;
 	void readAndParse();
+	//Read the Field and create output string
 	void compil();
+	//return output string;
 	string getOutput();
 
 	//bonus attaquant
@@ -34,6 +39,7 @@ public :
 		unsigned int defenses;
 	};
 
+	//gains
 	struct sGains
 	{
 		unsigned long bois;
@@ -46,8 +52,19 @@ public :
 		unsigned long hectares;
 	};
 
+	//erreurs
+	enum eError
+	{
+		PARSE_NO_ERROR = 0,
+		PARSE_NO_DATA,
+		PARSE_NO_WORDS
+	};
+
+
 private:
 
+	//perdu/gagné
+	bool won;
 	//nom de l'adversaire
 	string name;
 	//date
@@ -67,8 +84,19 @@ private:
 	//gains joueur 1
 	sGains gains1;
 	//gains joueur 2
-	sGains gain2;	
+	sGains gains2;
 
+
+	//status
+	eError status;
+
+	//input
+	string in;
+	//output
+	string out;
+
+	//words
+	words w;
 };
 
 #endif //_PARSER_H_
