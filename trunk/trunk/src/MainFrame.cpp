@@ -1,7 +1,8 @@
 #include <MainFrame.h>
 #include <iostream>
+#include <Parser.h>
 
-
+#include <iostream>
 
 MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 	: wxFrame((wxFrame*)NULL,-1,title,pos,size)
@@ -32,9 +33,16 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
 
 void MainFrame::Clic(wxCommandEvent &event)
 {
-	std::cout << "Converting ...." << std::endl;
-	outputText->AppendText("\nDone");
-	std::cout << "Done ! " << std::endl;
+	SetStatusText("Converting ....");
+	
+	//Get the text
+	string s = inputText->GetRange(0,inputText->GetLastPosition());
+	//Parse it
+	Parser p(s);
+	p.readAndParse();
+
+
+	SetStatusText("Done ! ");
 }
 
 BEGIN_EVENT_TABLE(MainFrame,wxFrame)

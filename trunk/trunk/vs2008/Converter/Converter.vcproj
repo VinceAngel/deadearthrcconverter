@@ -184,6 +184,14 @@
 				RelativePath="..\..\src\MainFrame.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\..\src\Parser.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\..\src\Splitter.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Fichiers d&apos;en-tête"
@@ -191,11 +199,19 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath="..\..\include\define.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\include\MainFrame.h"
 				>
 			</File>
 			<File
 				RelativePath="..\..\include\Parser.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\include\Splitter.h"
 				>
 			</File>
 		</Filter>
