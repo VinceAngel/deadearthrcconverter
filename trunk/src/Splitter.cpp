@@ -1,5 +1,7 @@
 #include <Splitter.h>
 
+#include <sstream>
+
 Splitter::Splitter(string in, string separator)
 {
 	_w.clear();
@@ -11,7 +13,9 @@ Splitter::Splitter(string in, string separator)
 	{
 		size_t index = in.find(separator,begin);
 		size_t end_l = in.find("\n",begin);
+		size_t tab = in.find("\t",begin);
 		index = std::min(index, end_l);
+		index = std::min(index, tab);
 
 		string word = in.substr(begin,index-begin);
 		//word = removeSpace(word);
@@ -40,4 +44,20 @@ string Splitter::removeSpace(string in)
 			in = in.substr(0,index) + in.substr(index+1,string::npos);
 	}
 	return in;
+}
+
+
+string Splitter::i_to_s(int i)
+{
+	std::stringstream out;
+	out << i;
+	return out.str();
+}
+
+int Splitter::s_to_i(string s)
+{
+	int i = 0;
+	std::istringstream myStream(s);
+	myStream >> i;
+	return i;
 }
