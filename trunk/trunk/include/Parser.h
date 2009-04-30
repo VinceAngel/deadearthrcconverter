@@ -39,6 +39,16 @@ public :
 		unsigned int defenses;
 	};
 
+	//nom troupes
+	struct snTroupes
+	{
+		string name1;
+		string name2;
+		string name3;
+		string name4;
+		string namedef;
+	};
+
 	//gains
 	struct sGains
 	{
@@ -57,16 +67,19 @@ public :
 	{
 		PARSE_NO_ERROR = 0,
 		PARSE_NO_DATA,
-		PARSE_NO_WORDS
+		PARSE_NO_WORDS,
+		PARSE_NO_ENOUGHT_WORDS
 	};
 
 
-private:
+protected:
 
 	//perdu/gagné
 	bool won;
 	//nom de l'adversaire
 	string name;
+	//versu
+	string versus;
 	//date
 	string date;
 	//mode
@@ -85,6 +98,9 @@ private:
 	sGains gains1;
 	//gains joueur 2
 	sGains gains2;
+	//nom troupes
+	snTroupes nameTroupes1;
+	snTroupes nameTroupes2;
 
 
 	//status
@@ -97,6 +113,8 @@ private:
 
 	//words
 	words w;
+
+	words ressources;
 };
 
 #endif //_PARSER_H_

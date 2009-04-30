@@ -40,7 +40,7 @@ void MainFrame::Clic(wxCommandEvent &event)
 	//Parse it
 	Parser p(s);
 	p.readAndParse();
-
+	p.compil();
 
 	SetStatusText("Done ! ");
 }

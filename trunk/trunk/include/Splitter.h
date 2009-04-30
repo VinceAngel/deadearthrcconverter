@@ -12,6 +12,9 @@ public:
 
 	string removeSpace(string);
 
+	static int		s_to_i(string s);
+	static string	i_to_s(int i);
+
 	words getWords()
 	{
 		return _w;
