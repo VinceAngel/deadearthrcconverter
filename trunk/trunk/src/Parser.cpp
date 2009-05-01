@@ -365,10 +365,10 @@ void Parser::compil()
 
 #ifdef VERTICAL_REPORT
 
-	ss << startCenter() << endl
+	ss << startQuote() << startCenter() << endl
 	<< startItal() << "Le " << date << endItal() << endl
 	<< endl
-	<< "Moi VS " << name <<endl
+	<< startColor(yellow) << startSize(3) << "Moi" << endSize() << endColor() << " VS " << startColor(yellow) << startSize(3) << name << endSize() << endColor() << endl
 	<< startBold() << versus << endBold() << endl
 	<< endl;
 
@@ -378,11 +378,12 @@ void Parser::compil()
 	
 	ss << "Attaque de type " << mode << endl
 	<< endl
-	<< "Race[" << bonus.race << "]  "
-	<< "General[" << bonus.general << "]" << endl
-	<< "Défense[" << bonus.defense << "]  "
-	<< "Formation[" << bonus.formation << "]" << endl
+	<< "Race [" << bonus.race << "]  -  "
+	<< "General [" << bonus.general << "]" << endl
+	<< "Défense [" << bonus.defense << "]  -  "
+	<< "Formation [" << bonus.formation << "]" << endl
 	<< endl
+	<< "___________________________________________________" << endl
 
 	<< startSize(2) << startBold() << "Avant le combat : " << endBold() << endSize() << endl
 	<< startUnd() << startBold() << "Moi " << endBold() << endUnd() << endl
@@ -398,26 +399,29 @@ void Parser::compil()
 	<< startColor(col3) << troupesBefore2.t3 << " " << nameTroupes2.name3 << endColor() << endl
 	<< startColor(col4) << troupesBefore2.t4 << " " << nameTroupes2.name4 << endColor() << endl
 	<< startColor(col5) << troupesBefore2.defenses<< " " << nameTroupes2.namedef << endColor() << endl
-	<< endl << endl 
+	<< endl
 
-	<< "BOUUUUUUUUUUUM" << endl
-	<< "J'ai " << startSize(3) << startBold() << vs << endBold() << endSize() << endl << endl
+	<< "___________________________________________________" << endl
+	<< "J'ai " << startSize(4) << startBold() << startColor("FFFFFF") << vs << endColor() << endBold() << endSize() << endl
+	<< "___________________________________________________" << endl << endl
+
 
 	<< startSize(2) << startBold() << "Apres le combat : " << endBold() << endSize() << endl
 	<< startUnd() << startBold() << "Moi " << endBold() << endUnd() << endl
-	<< startColor(col1) << troupesAfter1.t1 << " " << nameTroupes1.name1 << endColor() << endl
-	<< startColor(col2) << troupesAfter1.t2 << " " << nameTroupes1.name2 << endColor() << endl
-	<< startColor(col3) << troupesAfter1.t3 << " " << nameTroupes1.name3 << endColor() << endl
-	<< startColor(col4) << troupesAfter1.t4 << " " << nameTroupes1.name4 << endColor() << endl
-	<< startColor(col5) << troupesAfter1.defenses<< " " << nameTroupes1.namedef << endColor() << endl
+	<< startColor(col1) << troupesAfter1.t1 << " " << nameTroupes1.name1 << " (-" << Splitter::i_to_s(troupesBefore1.t1 - troupesAfter1.t1) << ")" << endColor() << endl
+	<< startColor(col2) << troupesAfter1.t2 << " " << nameTroupes1.name2 << " (-" << Splitter::i_to_s(troupesBefore1.t2 - troupesAfter1.t1) << ")" << endColor() << endl
+	<< startColor(col3) << troupesAfter1.t3 << " " << nameTroupes1.name3 << " (-" << Splitter::i_to_s(troupesBefore1.t3 - troupesAfter1.t1) << ")" << endColor() << endl
+	<< startColor(col4) << troupesAfter1.t4 << " " << nameTroupes1.name4 << " (-" << Splitter::i_to_s(troupesBefore1.t4 - troupesAfter1.t1) << ")" << endColor() << endl
+	<< startColor(col5) << troupesAfter1.defenses<< " " << nameTroupes1.namedef << " (-" << Splitter::i_to_s(troupesBefore1.defenses - troupesAfter1.defenses) << ")" << endColor() << endl
 	<< endl
 	<< startUnd() << startBold() << name << endBold() << endUnd() << endl
-	<< startColor(col1) << troupesAfter2.t1 << " " << nameTroupes2.name1 << endColor() << endl
-	<< startColor(col2) << troupesAfter2.t2 << " " << nameTroupes2.name2 << endColor() << endl
-	<< startColor(col3) << troupesAfter2.t3 << " " << nameTroupes2.name3 << endColor() << endl
-	<< startColor(col4) << troupesAfter2.t4 << " " << nameTroupes2.name4 << endColor() << endl
-	<< startColor(col5) << troupesAfter2.defenses<< " " << nameTroupes2.namedef << endColor() << endl
+	<< startColor(col1) << troupesAfter2.t1 << " " << nameTroupes2.name1 << " (-" << Splitter::i_to_s(troupesBefore2.t1 - troupesAfter2.t1) << ")" << endColor() << endl
+	<< startColor(col2) << troupesAfter2.t2 << " " << nameTroupes2.name2 << " (-" << Splitter::i_to_s(troupesBefore2.t2 - troupesAfter2.t2) << ")" << endColor() << endl
+	<< startColor(col3) << troupesAfter2.t3 << " " << nameTroupes2.name3 << " (-" << Splitter::i_to_s(troupesBefore2.t3 - troupesAfter2.t3) << ")" << endColor() << endl
+	<< startColor(col4) << troupesAfter2.t4 << " " << nameTroupes2.name4 << " (-" << Splitter::i_to_s(troupesBefore2.t4 - troupesAfter2.t4) << ")" << endColor() << endl
+	<< startColor(col5) << troupesAfter2.defenses<< " " << nameTroupes2.namedef << " (-" << Splitter::i_to_s(troupesBefore2.defenses - troupesAfter2.defenses) << ")" << endColor() << endl
 	<< endl
+	<< "___________________________________________________" << endl
 
 	<< "Gains" << endl
 	<< startUnd() << startBold() << "Moi " << endBold() << endUnd() << endl
@@ -440,9 +444,9 @@ void Parser::compil()
 	<< startColor(color) << gains2.or << " or" << endColor() << "  -  "
 	<< startColor(colhectare) << gains2.hectares << " hectares" << endColor() << endl
 	<< endl
-	<< startSize(1) << "RC generated by [url=\"http://code.google.com/p/deadearthrcconverter/\"]DeadEarthRCConverter [/url] - Made by Ange " << endSize() << endl
+	<< startSize(1) << startItal() << "RC generated by [url=\"http://code.google.com/p/deadearthrcconverter/\"]DeadEarthRCConverter [/url] - Made by Ange " << endItal()<< endSize() << endl
 
-	<< endCenter() << endl;
+	<< endCenter() << endQuote() << endl;
 
 
 #endif

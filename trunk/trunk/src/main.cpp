@@ -1,10 +1,9 @@
-// wxhello.cpp
-// Version using dynamic event routing
-// Robert Roebling, Martin Bernreuther
+
 
 #include <wx/wx.h>
 #include <MainFrame.h>
 
+#include <define.h>
 
 class MyApp : public wxApp
 {
@@ -27,7 +26,9 @@ IMPLEMENT_APP_NO_MAIN(MyApp)
 
 bool MyApp::OnInit()
 {
-	MainFrame *frame = new MainFrame(_T("DE RC converter v0.1"), wxPoint(50,50),
+	string version = VERSION;
+	string title = "DE RC converter "+version ;
+	MainFrame *frame = new MainFrame(_T(title), wxPoint(50,50),
                 wxSize(800,400));
 
 
