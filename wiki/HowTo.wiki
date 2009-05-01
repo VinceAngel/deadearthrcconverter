@@ -1,0 +1,22 @@
+#summary How to use it
+
+= Introduction =
+
+DERCConverter est un programme gratuit permettant de formater vos rapports de combat pour le forum de DeadEarth.[[BR]]
+La convertion ne se fera qu'avec des rapports valides et complets de la version 2.5 de DeadEarth.
+
+
+= Comment l'Utiliser =
+
+Dans la section de telechargement, choississez la derniere version.
+Telechargez le fichier et décompressez le à l'emplacement de votre choix.
+
+Aucune installation est requise. Il suffit de lancer le fichier Converter.exe.
+
+Dans le cadre de gauche collez votre rapport depuis "J'ai Gagné/perdu " jusqu'a le dernier gain d'hectare au minimum.
+
+= Bugs =
+
+Si vous remarquez des problemes, des améliorations potentielles, utilisez la section "Issues".
+
+Merci.
