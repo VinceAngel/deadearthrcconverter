@@ -3,7 +3,7 @@
 = Introduction =
 
 DERCConverter est un programme gratuit permettant de formater vos rapports de combat pour le forum de DeadEarth.[[BR]]
-La convertion ne se fera qu'avec des rapports valides et complets de la version 2.5 de DeadEarth.
+La convertion ne se fera qu'avec des rapports valides et complets de la version 2.5 de !DeadEarth.
 
 
 = Comment l'Utiliser =
