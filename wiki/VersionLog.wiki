@@ -1,0 +1,9 @@
+= v0.2 Beta = 
+
+ * Resoud le bug des troupes inversés selon le rapport gagnant/perdant
+ * Gere les rapports du général (2 noms au lieu d'un seul)
+
+
+= v0.1 Beta =
+
+ * Base
