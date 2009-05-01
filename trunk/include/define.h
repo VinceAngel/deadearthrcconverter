@@ -7,6 +7,8 @@ using std::string;
 
 typedef std::vector<string> words;
 
+#define VERSION "v0.1 Beta"
+
 #define VERTICAL_REPORT
 
 #endif 

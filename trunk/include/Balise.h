@@ -10,6 +10,9 @@ static string endBold()		{ return "[/b]";}
 static string startCenter()	{ return "[center]"; }
 static string endCenter()	{ return "[/center]"; }
 
+static string startQuote()	{ return "[quote]"; }
+static string endQuote()	{ return "[/quote]"; }
+
 static string startItal()	{ return "[i]"; }
 static string endItal()		{ return "[/i]"; }
 
@@ -22,16 +25,19 @@ static string endSize()		{ return "[/size]"; }
 static string startColor(string c)	{ return "[color=\"#"+c+"\"]"; }
 static string endColor()	{ return "[/color]"; }
 
-static string col1 = "880000";
-static string col2 = "A00000";
-static string col3 = "CC0000";
-static string col4 = "E00000";
+static string red = "FF0000";
+static string yellow = "FFFF00";
+
+static string col1 = "884040";
+static string col2 = "A03030";
+static string col3 = "CC2020";
+static string col4 = "E01010";
 static string col5 = "FF0000";
 
 static string colbois		= "7F3F3F";
-static string colpierre		= "EEEEEE";
+static string colpierre		= "FFFFFF";
 static string colbrique		= "FF7F00";
-static string colfer		= "DDDDDD";
+static string colfer		= "CCCCCC";
 static string coleau		= "7FFFFF";
 static string colnourriture = "FF90FF";
 static string color			= "FFFF50";
