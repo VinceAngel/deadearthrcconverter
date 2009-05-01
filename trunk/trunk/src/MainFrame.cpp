@@ -21,11 +21,11 @@ MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& si
 	button = new wxButton(panel, ID_Clic, "Convertir",wxPoint(360,100),wxSize(80,40));
 
 	// input text
-	inputText = new wxTextCtrl(panel, ID_In, "test\nhaha", wxPoint(2,2), wxSize(350,309),wxTE_MULTILINE);
+	inputText = new wxTextCtrl(panel, ID_In, "Collez votre RC ici", wxPoint(2,2), wxSize(350,309),wxTE_MULTILINE);
 	inputText->SetHelpText("Paste you RC here");
 
 	// output text
-	outputText = new wxTextCtrl(panel, ID_Out, "result", wxPoint(448,2), wxSize(348,309),wxTE_READONLY | wxTE_MULTILINE);
+	outputText = new wxTextCtrl(panel, ID_Out, "", wxPoint(448,2), wxSize(348,309),wxTE_READONLY | wxTE_MULTILINE);
 	outputText->SetHelpText("Get you RC here");
 	
 }
@@ -41,11 +41,15 @@ void MainFrame::Clic(wxCommandEvent &event)
 	Parser p(s);
 	p.readAndParse();
 
+	SetStatusText(p.getErrorString());
+
 	p.compil();
+
+	SetStatusText(p.getErrorString());
 
 	outputText->SetValue(p.getOutput());
 
-	SetStatusText("Done ! ");
+	SetStatusText(p.getErrorString());
 }
 
 BEGIN_EVENT_TABLE(MainFrame,wxFrame)

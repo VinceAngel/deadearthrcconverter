@@ -126,6 +126,8 @@ void Parser::compil()
 
 	int begin = 0;
 
+	int my_nb = -1;
+
 	try{
 
 		//search the begining
@@ -145,7 +147,9 @@ void Parser::compil()
 			won = true;
 
 		//name of the other one
-		name = w.at(begin+5);
+		name = w.at(begin+5); 
+
+		my_nb = Splitter::s_to_i(w.at(begin+6).substr(1));//get the nb of my troup to check later
 
 		versus = w.at(begin+6)+" "+w.at(begin+7)+" "+w.at(begin+8);
 
@@ -354,6 +358,23 @@ void Parser::compil()
 		std::cout << "Exception : " << e.what() << std::endl;
 		status = PARSE_NO_ENOUGHT_WORDS;
 	}
+
+
+
+	//== Check if the troup one is the good one, if not, exchange ==//
+	if(my_nb != troupesBefore1.sum())
+	{
+		//switch the datas
+		sTroupe temp;
+		temp = troupesBefore1;
+		troupesBefore1 = troupesBefore2;
+		troupesBefore2 = temp;
+
+		temp = troupesAfter1;
+		troupesAfter1 = troupesAfter2;
+		troupesAfter2 = temp;
+	}
+
 
 
 	//== Write the output string ==//
