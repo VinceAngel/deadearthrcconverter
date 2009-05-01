@@ -92,8 +92,10 @@ protected:
 
 	//perdu/gagné
 	bool won;
+	//nom de moi
+	string name1;
 	//nom de l'adversaire
-	string name;
+	string name2;
 	//versu
 	string versus;
 	//date
