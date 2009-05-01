@@ -13,11 +13,17 @@ class MyApp : public wxApp
 
 IMPLEMENT_APP_NO_MAIN(MyApp)
 
-int main(int argc, char **argv)
-{
-   return wxEntry(argc, argv);
-}
-
+#ifdef _RELEASE
+	int WinMain(HINSTANCE h, HINSTANCE p, LPSTR cmd, int nbcmd)
+	{
+	   return wxEntry(h, p, cmd, nbcmd);
+	}
+#else
+	int main(int argc, char **argv)
+	{
+	   return wxEntry(argc, argv);
+	}
+#endif
 
 bool MyApp::OnInit()
 {
