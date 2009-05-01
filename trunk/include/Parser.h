@@ -37,6 +37,8 @@ public :
 		unsigned int t3;
 		unsigned int t4;
 		unsigned int defenses;
+
+		unsigned int sum(){ return t1+t2+t3+t4+defenses;}
 	};
 
 	//nom troupes
@@ -70,6 +72,20 @@ public :
 		PARSE_NO_WORDS,
 		PARSE_NO_ENOUGHT_WORDS
 	};
+
+
+	string getErrorString(){
+		switch (status)
+		{
+		case PARSE_NO_DATA:
+		case PARSE_NO_WORDS:
+			return "Error : No Data to convert ! ";
+		case PARSE_NO_ENOUGHT_WORDS:
+			return "Error : Incomplete Entry, please paste a complete report ! ";
+		default:
+			return "Done";
+		}
+	}
 
 
 protected:
