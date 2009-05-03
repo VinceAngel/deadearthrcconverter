@@ -433,9 +433,9 @@ void Parser::compil()
 	<< startSize(2) << startBold() << "Apres le combat : " << endBold() << endSize() << endl
 	<< startUnd() << startBold() << name1 << endBold() << endUnd() << endl
 	<< startColor(col1) << troupesAfter1.t1 << " " << nameTroupes1.name1 << " (-" << Splitter::i_to_s(troupesBefore1.t1 - troupesAfter1.t1) << ")" << endColor() << endl
-	<< startColor(col2) << troupesAfter1.t2 << " " << nameTroupes1.name2 << " (-" << Splitter::i_to_s(troupesBefore1.t2 - troupesAfter1.t1) << ")" << endColor() << endl
-	<< startColor(col3) << troupesAfter1.t3 << " " << nameTroupes1.name3 << " (-" << Splitter::i_to_s(troupesBefore1.t3 - troupesAfter1.t1) << ")" << endColor() << endl
-	<< startColor(col4) << troupesAfter1.t4 << " " << nameTroupes1.name4 << " (-" << Splitter::i_to_s(troupesBefore1.t4 - troupesAfter1.t1) << ")" << endColor() << endl
+	<< startColor(col2) << troupesAfter1.t2 << " " << nameTroupes1.name2 << " (-" << Splitter::i_to_s(troupesBefore1.t2 - troupesAfter1.t2) << ")" << endColor() << endl
+	<< startColor(col3) << troupesAfter1.t3 << " " << nameTroupes1.name3 << " (-" << Splitter::i_to_s(troupesBefore1.t3 - troupesAfter1.t3) << ")" << endColor() << endl
+	<< startColor(col4) << troupesAfter1.t4 << " " << nameTroupes1.name4 << " (-" << Splitter::i_to_s(troupesBefore1.t4 - troupesAfter1.t4) << ")" << endColor() << endl
 	<< startColor(col5) << troupesAfter1.defenses<< " " << nameTroupes1.namedef << " (-" << Splitter::i_to_s(troupesBefore1.defenses - troupesAfter1.defenses) << ")" << endColor() << endl
 	<< endl
 	<< startUnd() << startBold() << name2 << endBold() << endUnd() << endl
