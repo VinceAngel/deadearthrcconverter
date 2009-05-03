@@ -1,3 +1,7 @@
+= v0.3 Beta = 
+
+ * Regle le probleme du nombre de troupes perdues
+
 = v0.2 Beta = 
 
  * Resoud le bug des troupes inversés selon le rapport gagnant/perdant
