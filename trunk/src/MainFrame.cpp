@@ -5,7 +5,7 @@
 #include <iostream>
 
 MainFrame::MainFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
-	: wxFrame((wxFrame*)NULL,-1,title,pos,size)
+	: wxFrame((wxFrame*)NULL,-1,title,pos,size, wxMINIMIZE_BOX | wxSYSTEM_MENU | wxCAPTION | wxCLOSE_BOX | wxCLIP_CHILDREN)
 {
 
 	panel= new wxPanel(this);
